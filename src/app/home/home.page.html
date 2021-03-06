@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Exercicos Listas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h2>Lista Fixa</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Black Desert</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Perfect World</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mu online</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Forsaken</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Grande Chase</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <h2>Lista dinamica</h2>
+  <ion-list>
+
+    <ion-item *ngFor="let item of lista">
+       <ion-label (click)="mostra(item.name)"> {{ item.name }} </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
